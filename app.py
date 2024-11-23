@@ -1,4 +1,5 @@
 import streamlit as st
+import graphviz
 from graphviz import Source
 import subprocess
 
