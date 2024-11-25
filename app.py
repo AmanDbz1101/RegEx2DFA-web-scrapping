@@ -5,7 +5,7 @@ import subprocess
 def run_exe(input_expression):
     # Run the .exe file with input
     result = subprocess.run(
-        ["/main app/main.exe"],  # Replace with the actual path to the exe
+        [exe_path],  # Replace with the actual path to the exe
         input=input_expression,        # Input string for the exe
         text=True,                     # Send input as a text string
         capture_output=False            # Capture the output from the exe
@@ -65,6 +65,12 @@ class RegEx:
 
 
 st.title("RegEx2DFA")
+
+# Get the directory of the current script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Path to the .exe relative to the script
+exe_path = os.path.join(script_dir, "main app", "main.exe")
 
 # User input
 user_expression = st.text_input("Enter your expression:")
