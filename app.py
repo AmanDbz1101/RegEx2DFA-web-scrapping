@@ -1,6 +1,7 @@
 import streamlit as st
 from graphviz import Source
 import subprocess
+import os
 
 def run_exe(input_expression):
     # Run the .exe file with input
