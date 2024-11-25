@@ -5,7 +5,7 @@ import subprocess
 def run_exe(input_expression):
     # Run the .exe file with input
     result = subprocess.run(
-        ["main.exe"],  # Replace with the actual path to the exe
+        ["/main app/main.exe"],  # Replace with the actual path to the exe
         input=input_expression,        # Input string for the exe
         text=True,                     # Send input as a text string
         capture_output=False            # Capture the output from the exe
